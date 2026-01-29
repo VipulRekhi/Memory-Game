@@ -1,22 +1,28 @@
+let template={}
+//random num generator
+for(let i=0 ;i<16 ;i++)
+{
+var randnum=Math.floor((Math.random()*4)+1)
+template[i+1]="a"+randnum;
+}
+
 var click=0;
-var history=null;  // to maintain first click record
+var his=null;  // to maintain first click record
 $(".main").on("click", function()
 {
     click++;
     $(this).addClass("red");
     if(click == 1)
     {
-        history=$(this);
+        his=$(this);
     }
     
     if (click == 2)
 {
-    $(this).animate({opacity:0.3},200 , function()
-{
-    $(this).removeClass("red");
-    history.removeClass("red");
-});
-    click=0;
-    history=null;
+    setTimeout(() =>
+    {
+   $(this).removeClass("red");
+   his.removeClass("red");},300)
+   click=0;
 }
 });
