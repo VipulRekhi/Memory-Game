@@ -45,3 +45,19 @@ body{
     margin: 10px;
     border-radius: 15%;
 }
+.red
+{
+    background-color: red;
+}
+.yellow
+{
+    background-color: rgb(221, 236, 5);
+}
+.green
+{
+    background-color: green;
+}
+.black
+{
+    background-color: black;
+}
