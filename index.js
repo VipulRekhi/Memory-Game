@@ -1,11 +1,12 @@
 
 let set=["a1","a1","a1","a1","a2","a2","a2","a2","a3","a3","a3","a3","a4","a4","a4","a4"];
 
-// layout logic
+// fix layout logic
+
 let template=[];
-let actual_grid={}
-var t=0;
+let actual_grid={};
 var i=0;
+var g_value=null;
 while(template.length != 16)
 {
 
@@ -17,24 +18,37 @@ if(template.includes(randnum) === false)
     i++;
 }
 }
-console.log(actual_grid)
+
+//setting class on specific click
+
+$(".main").on("click",function()
+{
+    g_value=this.classList[1]; // stores the value of which grid block actualy cliked
+});
+
+
+//2 click transition
+
 var click=0;
 var his=null;  // to maintain first click record
+var first_g_value=null;
 $(".main").on("click", function()
 {
     click++;
-    $(this).addClass("a4");
+    $(this).addClass(actual_grid[g_value]);
     if(click == 1)
     {
         his=$(this);
+        first_g_value=g_value;
+
     }
     
     if (click == 2)
 {
     setTimeout(() =>
     {
-   $(this).removeClass();
-   his.removeClass();},300)
+   $(this).removeClass(actual_grid[g_value]);
+   his.removeClass(actual_grid[first_g_value]);},300)
    click=0;
 }
 });
