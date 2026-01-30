@@ -1,16 +1,16 @@
 h1{
-    color: #FF7444;
+    color: #F6CE71;
     font-size: 45pt;
     text-align: center;
 }
 h4
 {
-    color:#FF7444;;
+    color:#F6CE71;;
     text-align: center;
     font-size: 16pt;
 }
 body{
-    background-color:#B7BDF7;
+    background-color:#b62525;
 }
 
 .bitcount-prop-single{
@@ -28,12 +28,18 @@ body{
 {
     height: 400px;
     width: 400px;
-    background-color:#FFF8DE;
+    background-color:#F6CE71;
     border-radius: 7%;
     display: grid;
     grid-template-columns: 4fr 4fr 4fr 4fr;
     padding: 5px;
 }
+.indie-flower-regular {
+  font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .cen
 {
     display: flex;
@@ -41,17 +47,17 @@ body{
 }
 .main
 {
-    background-color: #576A8F;
+    background-color: #CC561E;
     margin: 5px;
     border-radius: 15%;
 }
 .a1
 {
-    background-color: red;
+    background-color: purple;
 }
 .a2
 {
-    background-color: rgb(221, 236, 5);
+    background-color: cyan;
 }
 .a3
 {

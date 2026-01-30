@@ -7,6 +7,7 @@ let template = [];
 let actual_grid = {};
 var i = 0;
 var g_value = null;
+var score = 0;
 while (template.length != 16) {
 
     var randnum = Math.floor((Math.random() * 16))
@@ -36,15 +37,15 @@ $(".main").on("click", function () {
         his = $(this);
         first_g_value = g_value; //keeping track of first g value
     }
-    if(click==2 && this==his[0]) //verification for same box double click
+    if (click == 2 && this == his[0]) //verification for same box double click
     {
         alert("Dont Click Same Box Twice")
-        click=1;
+        click = 1;
         return;
     }
     else // verified not clicked twice
-        {
-         
+    {
+
         if (click == 2) {
             //matching condition
             if (actual_grid[g_value] === actual_grid[first_g_value]) {
@@ -53,6 +54,13 @@ $(".main").on("click", function () {
                     his.css("visibility", "hidden");
 
                     click = 0;
+                    score++;
+                    
+                    //winning msg
+                    if (score == 8) {
+                        alert("wohoooo!! You Won Lets Play Again");
+                        location.reload(true);
+                    }
                     return;
                 }, 500
                 );
@@ -67,5 +75,6 @@ $(".main").on("click", function () {
                 click = 0;
             }
         }
-    }}
+    }
+}
 );
