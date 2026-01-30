@@ -26,13 +26,13 @@ body{
 }
 .container
 {
-    height: 700px;
-    width: 600px;
+    height: 400px;
+    width: 400px;
     background-color:#FFF8DE;
     border-radius: 7%;
     display: grid;
     grid-template-columns: 4fr 4fr 4fr 4fr;
-    padding: 10px;
+    padding: 5px;
 }
 .cen
 {
@@ -42,7 +42,7 @@ body{
 .main
 {
     background-color: #576A8F;
-    margin: 10px;
+    margin: 5px;
     border-radius: 15%;
 }
 .a1
@@ -62,52 +62,48 @@ body{
     background-color: black;
 }
 @media (max-width: 768px) {
-
     h1 {
-        font-size: 28pt;
+        font-size: 32pt ;
     }
 
     h4 {
-        font-size: 12pt;
-    }
-
-    body {
-        margin: 0;
-        padding: 0;
+        font-size: 20pt;
     }
 
     .container {
-        width: 95%;
-        height: auto;
-        padding: 8px;
-        border-radius: 20px;
-
+        width: 90vw;
+        height: 90vw;
+        padding: 6px;
+        border-radius: 18px;
         grid-template-columns: repeat(4, 1fr);
     }
 
     .main {
-        margin: 6px;
-        border-radius: 18%;
-        min-height: 60px;  
+        margin: 4px;
+        border-radius: 14%;
+        aspect-ratio: 1 / 1;
     }
 }
-@media (max-width: 480px) {
 
+@media (max-width: 480px) {
     h1 {
-        font-size: 22pt;
+        font-size: clamp(28px, 7vw, 38px);
     }
 
     h4 {
-        font-size: 11pt;
+        font-size: 13px;
     }
 
     .container {
-        width: 100%;
-        padding: 6px;
+        width: 94vw;
+        height: 94vw;
+        padding: 5px;
+        border-radius: 16px;
     }
 
     .main {
-        margin: 4px;
-        min-height: 50px;
+        margin: 3px;
+        border-radius: 12%;
+        aspect-ratio: 1 / 1;
     }
 }
