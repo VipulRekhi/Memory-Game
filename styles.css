@@ -61,3 +61,53 @@ body{
 {
     background-color: black;
 }
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 28pt;
+    }
+
+    h4 {
+        font-size: 12pt;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        width: 95%;
+        height: auto;
+        padding: 8px;
+        border-radius: 20px;
+
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .main {
+        margin: 6px;
+        border-radius: 18%;
+        min-height: 60px;  
+    }
+}
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 22pt;
+    }
+
+    h4 {
+        font-size: 11pt;
+    }
+
+    .container {
+        width: 100%;
+        padding: 6px;
+    }
+
+    .main {
+        margin: 4px;
+        min-height: 50px;
+    }
+}

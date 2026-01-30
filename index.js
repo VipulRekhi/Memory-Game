@@ -38,7 +38,7 @@ $(".main").on("click", function () {
     }
     if(click==2 && this==his[0]) //verification for same box double click
     {
-        alert("dont click same box twicw")
+        alert("Dont Click Same Box Twice")
         click=1;
         return;
     }
