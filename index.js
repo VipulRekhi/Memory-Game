@@ -11,7 +11,7 @@ var his=null;  // to maintain first click record
 $(".main").on("click", function()
 {
     click++;
-    $(this).addClass("red");
+    $(this).addClass(template[4]);
     if(click == 1)
     {
         his=$(this);
@@ -21,8 +21,8 @@ $(".main").on("click", function()
 {
     setTimeout(() =>
     {
-   $(this).removeClass("red");
-   his.removeClass("red");},300)
+   $(this).removeClass(template[4]);
+   his.removeClass(template[4]);},300)
    click=0;
 }
 });
