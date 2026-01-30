@@ -1,9 +1,13 @@
-let template={}
-//random num generator
-for(let i=0 ;i<16 ;i++)
+var randnum=Math.floor((Math.random()*16))
+let set=["a1","a1","a1","a1","a2","a2","a2","a2","a3","a3","a3","a3","a4","a4","a4","a4"];
+
+// layout logic
+let template=[];
+var t=0;
+if(template.includes(randnum) === false)
 {
-var randnum=Math.floor((Math.random()*4)+1)
-template[i+1]="a"+randnum;
+    template.push(randnum)
+    t=set[randnum];
 }
 
 var click=0;
@@ -11,7 +15,7 @@ var his=null;  // to maintain first click record
 $(".main").on("click", function()
 {
     click++;
-    $(this).addClass(template[4]);
+    $(this).addClass("a4");
     if(click == 1)
     {
         his=$(this);
@@ -21,8 +25,8 @@ $(".main").on("click", function()
 {
     setTimeout(() =>
     {
-   $(this).removeClass(template[4]);
-   his.removeClass(template[4]);},300)
+   $(this).removeClass();
+   his.removeClass();},300)
    click=0;
 }
 });
